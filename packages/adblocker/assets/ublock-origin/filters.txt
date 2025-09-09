@@ -632,6 +632,8 @@ wcoforever.net###sidebar_r1
 @@||embed.watchanimesub.net^$script,1p
 ! https://github.com/uBlockOrigin/uAssets/issues/29349
 @@||embed.wcostream.com^$ghide
+embed.wcostream.com##+js(remove-cookie, PHPSESSID)
+||embed.wcostream.com/inc/embed/index.php?file=$uritransform=/index/video-js/
 ! https://github.com/uBlockOrigin/uAssets/issues/331
 ! https://github.com/uBlockOrigin/uAssets/issues/10133
 handelsblatt.com##+js(no-xhr-if, request%3Dadb)
@@ -1370,15 +1372,6 @@ noticias.gospelmais.com.br##+js(set, blockAdBlock, true)
 songs.*##+js(aopr, AaDetector)
 ! https://github.com/uBlockOrigin/uAssets/issues/1076
 mel.fm##+js(nofab)
-! https://github.com/uBlockOrigin/uAssets/issues/1083
-@@||spiele.heise.de^$ghide
-heise.de###topBannerContainer
-heise.de##.keygameBannerContainer
-heise.de##.ad-microsites
-heise.de##.tipps-content-ad
-heise.de##.hbs-ad
-heise.de##.stage-advertising
-heise.de##.ad
 ! https://github.com/uBlockOrigin/uAssets/issues/1101
 dailygeekshow.com##+js(aopr, jQuery.hello)
 ! https://github.com/uBlockOrigin/uAssets/issues/1093

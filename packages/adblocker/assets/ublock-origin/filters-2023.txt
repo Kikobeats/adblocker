@@ -759,8 +759,6 @@ lightnovelspot.com,novelpub.com,webnovelpub.com##+js(nostif, %3D%3E)
 ! https://github.com/uBlockOrigin/uAssets/issues/18522
 ! https://www.reddit.com/r/uBlockOrigin/comments/11dh4jm/ads_are_not_blocked_on_tidal_web_browser_details/jp0ed30/
 ! listen.tidal.com##+js(json-prune, countryCode, tidalId)
-! https://github.com/uBlockOrigin/uAssets/issues/17012
-mail.yahoo.com##+js(nostif, ADB)
 ! https://github.com/uBlockOrigin/uAssets/issues/17014
 taigoforum.de##+js(acs, %24, .show)
 ! https://github.com/uBlockOrigin/uAssets/issues/17018
@@ -1952,6 +1950,7 @@ peakpx.com,pxfuel.com##.list_ads:style(height: 0px !important;)
 ! https://github.com/uBlockOrigin/uAssets/issues/18411#issuecomment-1581550336
 pikist.com##.lst_ads:style(height: 0px !important;)
 ! https://www.reddit.com/r/uBlockOrigin/comments/16d9c4a/help_how_to_block_seemingly_random_element_in/
+! https://github.com/uBlockOrigin/uAssets/issues/29910
 ||androidauth.wpengine.com/wp-json/api/advanced_placement/
 androidauthority.com##main > div:last-child > div:has(> .ad)
 androidauthority.com##main > div > div:empty:matches-css(min-height: 250px):matches-css(min-width: 80%)
@@ -1960,7 +1959,6 @@ androidauthority.com##main > script + div:has(> div:only-child:empty)
 androidauthority.com##div:has(> div:only-child > .pw-incontent)
 androidauthority.com##aside > div > div > div > div > div:has(> div:only-child:empty)
 androidauthority.com##aside > div > div:empty
-androidauthority.com##[href^="https://www.androidauthority.com/deals"]:upward(1)
 ! https://github.com/uBlockOrigin/uAssets/issues/18422
 ||imasdk.googleapis.com/js/sdkloader/ima3_dai.js$script,domain=paramountnetwork.com,redirect=noopjs
 ! https://github.com/uBlockOrigin/uAssets/issues/18423
@@ -1991,16 +1989,10 @@ my.irancell.ir##+js(trusted-click-element, div%5Bclass%5E%3D%22css-%22%5D%5Bstyl
 ||migmig.affilio.ir/api/v1/Click^$doc,urlskip=?b64 -base64
 ! https://shomareh-yab.ir/shomarehyab/ - Search limit
 shomareh-yab.ir##+js(trusted-suppress-native-method, Storage.prototype.setItem, searchCount)
-! https://github.com/uBlockOrigin/uAssets/pull/10059
-@@||sportdeutschland.tv/assets/*$script,1p
-@@||71i.de/*/loader.js$script,domain=sportdeutschland.tv
-! https://github.com/uBlockOrigin/uAssets/issues/14656
-sportdeutschland.tv##+js(set, google.ima.settings.setDisableFlashAds, noopFunc)
-||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=sportdeutschland.tv
-@@||relay-client-c03.iocnt.net^$script,domain=sportdeutschland.tv
-! https://www.reddit.com/r/uBlockOrigin/comments/144r0f1/adblock_detected_site_sportdeutschlandtv/jnh4vvo/
-@@||data.sportdeutschland.tv/data.js$script,1p
-||bat.bing.com/bat.js$script,domain=sportdeutschland.tv,redirect=noopjs
+! https://github.com/uBlockOrigin/uAssets/issues/27291
+sporteurope.tv##+js(set, google.ima.settings.setDisableFlashAds, noopFunc)
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=sporteurope.tv
+||bat.bing.com/bat.js$script,domain=sporteurope.tv,redirect=noopjs
 ! sdmoviespoint. training popups + detection
 ! https://github.com/uBlockOrigin/uAssets/issues/4411#issuecomment-1804073748
 *$script,3p,domain=sdmoviespoint.*,denyallow=disqus.com|disquscdn.com|disqus.map.fastlylb.net|media-imdb.com|media-amazon.com|cloudfront.net
@@ -2047,13 +2039,6 @@ steamcrackedgames.com##.blink
 steamcrackedgames.com##+js(nowoif)
 ! https://github.com/uBlockOrigin/uAssets/issues/18528
 j91.asia##+js(nostif, fuckadb)
-! https://github.com/AdguardTeam/AdguardFilters/issues/153796
-@@*$xhr,domain=rekidai-info.github.io
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rekidai-info.github.io
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_$script,domain=rekidai-info.github.io
-@@||googletagmanager.com/gtag/js$script,domain=rekidai-info.github.io
-rekidai-info.github.io##+js(nostif, %2Faframe%7CquerySelector%2F, 1000-)
-rekidai-info.github.io##+js(nosiif, location%5B_0x)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69447
 online2pdf.com##div[id*="horizontal_box"]
 online2pdf.com##div[id*="title_vertical"]
@@ -2501,6 +2486,9 @@ cnn.com##+js(set, FAVE.settings.ads.ssai.prod.liveAuth.enabled, false)
 cnn.com##+js(set, FAVE.settings.ads.ssai.prod.liveUnauth.enabled, false)
 ! cnn top ads
 cnn.com##.ad-slot-header__wrapper:style(display: none !important; top: 0 !important)
+! https://www.reddit.com/r/uBlockOrigin/comments/1n9lexf/cnn_video_ads_arent_being_blocked_by_ubo/
+cnn.com##+js(json-prune-fetch-response, ssaiInfo%20fallback.ssaiInfo, , propsToMatch, %2FplaybackInfo)
+cnn.com##+js(json-prune-xhr-response, ssaiInfo%20fallback.ssaiInfo, , propsToMatch, %2FplaybackInfo)
 ! https://github.com/bogachenko/fuckfuckadblock/issues/446
 /adblocker.js$domain=hindimearticles.net|solution-hub.com
 dinnerexa.com,hindimearticles.net,solution-hub.com,thenextplanet1.*,tnp98.xyz##+js(nowoif)
